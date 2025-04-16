@@ -51,7 +51,7 @@ runs:
         cd ${{ inputs.rootPath }}
         dx build --${{ inputs.buildMode }}
         mkdir -p dist
-        cp -r target/dx/portfolio_website/release/web/* dist/
+        cp -r target/dx/portfolio_website/release/web/public/* dist/
         cp dist/index.html dist/404.html
 
     - name: Deploy Project 🚀
