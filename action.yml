@@ -47,7 +47,7 @@ runs:
 
     - name: Build Project 🎁
       shell: bash
-      run:
+      run: |
         cd ${{ inputs.rootPath }}
         dx build --${{ inputs.buildMode }}
         mkdir -p dist
