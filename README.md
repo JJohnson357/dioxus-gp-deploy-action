@@ -21,5 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Dioxus Deploy"
-        uses: joej/dioxus-deploy-gp-action@0.1.0
+        uses: joej/dioxus-gp-deploy-action@v0.1.0
 ```
