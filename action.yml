@@ -47,7 +47,12 @@ runs:
 
     - name: Build Project 🎁
       shell: bash
-      run: cd ${{ inputs.rootPath }} && dx build --${{ inputs.buildMode }} && cp ./${{ inputs.outDirectory }}/index.html ./${{ inputs.outDirectory }}/404.html
+      run:
+        cd ${{ inputs.rootPath }}
+        dx build --${{ inputs.buildMode }}
+        mkdir -p dist
+        cp -r target/dx/portfolio_website/release/web/* dist/
+        cp dist/index.html dist/404.html
 
     - name: Deploy Project 🚀
       uses: JamesIves/github-pages-deploy-action@v4.6.3
